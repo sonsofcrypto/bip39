@@ -1,3 +1,5 @@
+# bip39
+
 Implementation of [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) in go.
 Fork of [go-bip39](https://https://github.com/tyler-smith/go-bip39), its own repo due to versioning issues with `go mod`.
 
@@ -9,7 +11,7 @@ package main
 import (
     "fmt"
     "github.com/sonsofcrypto/bip39"
-    "github.com/ethereum/go-ethereum/common/hexutil"
+	"encoding/hex"
     "math/big"
 )
 
@@ -27,7 +29,7 @@ func main() {
 	// Display mnemonic and keys
 	fmt.Println("Mnemonic:", mnemonic)
 	fmt.Println("Seed:", seed)
-	fmt.Println("Hex:", hexutil.Encode(seed))
+	fmt.Println("Hex:", hex.EncodeToString(seed))
 	fmt.Println("Int:", big.NewInt(0).SetBytes(seed[:]))
 }
 ```

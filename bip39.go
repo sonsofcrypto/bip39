@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+
+// Package bip39 implementation of [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki)
 package bip39
 
 import (

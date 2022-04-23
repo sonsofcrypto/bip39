@@ -2,8 +2,8 @@
 package bip39
 
 import (
+	"encoding/hex"
 	"fmt"
-	"github.com/ethereum/go-ethereum/common/hexutil"
 	"math/big"
 	"testing"
 )
@@ -26,6 +26,6 @@ func TestGetWordList(t *testing.T) {
 	// Display mnemonic and keys
 	fmt.Println("Mnemonic:", mnemonic)
 	fmt.Println("Seed:", seed)
-	fmt.Println("Hex:", hexutil.Encode(seed))
+	fmt.Println("Hex:", hex.EncodeToString(seed))
 	fmt.Println("Int:", big.NewInt(0).SetBytes(seed[:]))
 }
